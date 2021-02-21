@@ -23,18 +23,18 @@ large_fields = driver.find_elements_by_class_name('quantumWizTextinputPapertexta
 submit_btn = driver.find_element_by_class_name('appsMaterialWizButtonPaperbuttonLabel')
 
 #() this dict can possibly be taken from a file if needed
-details = {
-    "name" : "Quack",
-    "roll" : "100",
-    "email" : "123@123.com",
-    "address" : "Baker Street"
-}
+details = [
+     "Quack",
+    "100",
+    "123@123.com",
+    "Baker Street"
+]
 
 #() from here the code becomes custom as the layout depends
 for i in range(0, 3):
     small_fields[i].send_keys(details[i])
 
-large_fields.send_keys(details[3])
+large_fields[0].send_keys(details[3])
 
 submit_btn.click()
 
