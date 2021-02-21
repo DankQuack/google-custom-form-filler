@@ -11,7 +11,7 @@ values = df.values
 
 option = webdriver.ChromeOptions()  #(2) initialize webdriver, here i am using chrome but you can use any engine you desire
 option.add_argument("-incognito")   #(2.a)
-#option.add_argument("--headless")  #(2.b)
+option.add_argument("--headless")  #(2.b)
 #option.add_argument("disable-gpu") #(2.c)
 
 driver = webdriver.Chrome(values[0][0],options=option)
@@ -25,7 +25,7 @@ submit_btn = driver.find_element_by_class_name('appsMaterialWizButtonPaperbutton
 #() this dict can possibly be taken from a file if needed
 details = [
      "Quack",
-    "100",
+    "101",
     "123@123.com",
     "Baker Street"
 ]
